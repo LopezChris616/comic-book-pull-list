@@ -23,6 +23,8 @@ function ComicBookPulls() {
 
     const tableHeaders = headers.map(header => <TableCell align="right" key={header}>{header}</TableCell>);
 
+    const tableData = comics.map(comic => <ComicBook comic={comic} key={comic.id} />)
+
     return (
         <>
             <h1>{window.location.pathname.slice(1)}</h1>
@@ -33,11 +35,13 @@ function ComicBookPulls() {
                             {tableHeaders}
                         </TableRow>
                     </TableHead>
+                    <TableBody>
+                        {tableData}
+                    </TableBody>
                 </Table>
             </TableContainer>
         </>
     )
-
 }
 
 export default ComicBookPulls;
