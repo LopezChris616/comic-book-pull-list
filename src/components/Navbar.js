@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 
 function Navbar() {
     return (
-        <Box sx={{flexGrow: 1}}>
+        <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" color="info">
                 <Toolbar>
                     <Typography variant="h6" sx={{ flexGrow: 1 }}>
