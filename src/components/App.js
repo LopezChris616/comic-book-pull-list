@@ -1,6 +1,7 @@
 import Home from "./Home";
 import Navbar from "./Navbar";
 import ComicBookPulls from "./ComicBookPulls";
+import NewComicBook from "./NewComicBook";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/image">
           <ComicBookPulls />
+        </Route>
+        <Route path="/addComic">
+          <NewComicBook />
         </Route>
       </Switch>
     </div>
