@@ -25,6 +25,9 @@ function Navbar() {
                     <NavLink to="/image">
                         <Button sx={{ color: "white" }}>Image Comics</Button>
                     </NavLink>
+                    <NavLink to="/addComic">
+                        <Button sx={{ color: "white" }}>Add Comic Book</Button>
+                    </NavLink>
                 </Toolbar>
             </AppBar>
         </Box>

@@ -12,16 +12,17 @@ import Paper from '@mui/material/Paper';
 function ComicBookPulls() {
     const [comics, setComics] = useState([]);
     const headers = ["Title", "Type", "Genre", "Price"];
+    const path = window.location.pathname;
 
     const tableStyle = {
         color: "white"
     };
 
     useEffect(() => {
-        fetch(`https://comic-book-pull-list.onrender.com${window.location.pathname}`)
+        fetch(`https://comic-book-pull-list.onrender.com${path}`)
             .then(res => res.json())
             .then(comicList => setComics(comicList))
-    }, [window.location.pathname])
+    }, [path])
 
     console.log(comics);
 
