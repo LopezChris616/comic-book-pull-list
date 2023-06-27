@@ -6,10 +6,16 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import Grid from "@mui/material/Grid";
+import Paper from '@mui/material/Paper';
 
 function ComicBookPulls() {
     const [comics, setComics] = useState([]);
     const headers = ["Title", "Type", "Genre", "Price"];
+
+    const tableStyle = {
+        color: "white"
+    };
 
     useEffect(() => {
         fetch(`https://comic-book-pull-list.onrender.com${window.location.pathname}`)
@@ -21,25 +27,27 @@ function ComicBookPulls() {
 
     
 
-    const tableHeaders = headers.map(header => <TableCell align="right" key={header}>{header}</TableCell>);
+    const tableHeaders = headers.map(header => <TableCell align="center" sx={ tableStyle } key={ header }>{ header }</TableCell>);
 
-    const tableData = comics.map(comic => <ComicBook comic={comic} key={comic.id} />)
+    const tableData = comics.map(comic => <ComicBook comic={ comic } tableStyle={ tableStyle } key={ comic.id } />)
 
     return (
         <>
-            <h1>{window.location.pathname.slice(1)}</h1>
-            <TableContainer>
-                <Table sx={{minWidth: 700}}>
-                    <TableHead>
-                        <TableRow>
-                            {tableHeaders}
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {tableData}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+            <h1 style={{color: "white", textAlign: "center"}}>{window.location.pathname.slice(1).toUpperCase()}</h1>
+            <Grid container>
+                <TableContainer sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <Table sx={{ maxWidth: 700 }}>
+                        <TableHead>
+                            <TableRow>
+                                { tableHeaders }
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            { tableData }
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Grid>
         </>
     )
 }
