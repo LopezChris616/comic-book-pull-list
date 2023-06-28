@@ -24,6 +24,15 @@ function NewComicBook() {
                         </select>
                     </div>
                     <div className="form-item">
+                        <label htmlFor="comic-publisher">Publisher </label>
+                        <select id="comic-publisher" defaultValue="Select">
+                            <option disabled>Select</option>
+                            <option value="marvel">Marvel Comics</option>
+                            <option value="dc">DC Comics</option>
+                            <option value="image">Image Comics</option>
+                        </select>
+                    </div>
+                    <div className="form-item">
                         <label htmlFor="comic-genre">Genre </label>
                         <input id="comic-genre" />
                     </div>
