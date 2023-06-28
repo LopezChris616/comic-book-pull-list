@@ -12,24 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-fieldset.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-  border-color: #0288D1;
-  color: white;
-}
-
-input.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  color: white;
-}
-
-label.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  color: #0288D1;
-}
-
-label.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
-  color: #0288D1;
-}
-
-fieldset.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-  border-color: #0288D1;
-}
