@@ -26,7 +26,7 @@ code {
   justify-content: space-between;
   align-items: center;
   background-color: #5f30b8;
-  height: 8vh;
+  height: 55px;
 }
 
 .navbar a {
@@ -74,4 +74,18 @@ code {
 .home-page a:hover {
   color: #5f30b8;
   background-color: #1E1E1E;
+}
+
+.comic-data {
+  text-align: center;
+  color: white;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 15px; /* Adjust the desired spacing value */
+}
+
+td {
+  /* border-left: 1px solid #5f30b8; */
 }

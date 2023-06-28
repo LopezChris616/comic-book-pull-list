@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import ComicBook from "./ComicBook";
+import Navbar from "./Navbar";
+import ComicBook from "./ComicBook";
 
 function ComicBookPulls() {
     const [comics, setComics] = useState([]);
-    // const headers = ["Title", "Type", "Genre", "Price"];
+    const headers = ["Title", "Type", "Genre", "Price"];
     const path = window.location.pathname;
 
     useEffect(() => {
@@ -14,11 +15,29 @@ function ComicBookPulls() {
 
     console.log(comics);
 
+    const tableHeaders = headers.map(header => <th key={ header }>{ header }</th>);
+    const tableData = comics.map(comic => <ComicBook comic={ comic } key={ comic.id } />)
+
     return (
-        <h1>Comic Book Pulls</h1>
+        <>
+            <Navbar />
+            <div className="comic-data">
+                <h1>{ path.slice(1).toUpperCase() } COMICS</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            { tableHeaders }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { tableData }
+                    </tbody>
+                </table>
+            </div>
+        </>
     )
 
-    // const tableHeaders = headers.map(header => <TableCell align="center" sx={ tableStyle } key={ header }>{ header }</TableCell>);
+    // 
 
     // const tableData = comics.map(comic => <ComicBook comic={ comic } tableStyle={ tableStyle } key={ comic.id } />)
 

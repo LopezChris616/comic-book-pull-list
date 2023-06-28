@@ -1,19 +1,14 @@
 import React from "react";
 
-function ComicBook({ comic, tableStyle }) {
-
+function ComicBook({ comic }) {
     return (
-        <h1>Comic Books</h1>
+        <tr>
+            <td>{comic.title}</td>
+            <td>{comic.type}</td>
+            <td>{comic.genre}</td>
+            <td>{comic.price}</td>
+        </tr>
     )
-
-    // return (
-    //     <TableRow>
-    //         <TableCell align="center" sx={tableStyle}>{comic.title}</TableCell>
-    //         <TableCell align="center" sx={tableStyle}>{comic.type}</TableCell>
-    //         <TableCell align="center" sx={tableStyle}>{comic.genre}</TableCell>
-    //         <TableCell align="center" sx={tableStyle}>{comic.price}</TableCell>
-    //     </TableRow>
-    // )
 }
 
 export default ComicBook;

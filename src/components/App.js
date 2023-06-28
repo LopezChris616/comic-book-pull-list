@@ -1,5 +1,4 @@
 import Home from "./Home";
-import Navbar from "./Navbar";
 import ComicBookPulls from "./ComicBookPulls";
 import NewComicBook from "./NewComicBook";
 import { Route, Switch } from "react-router-dom";
@@ -7,7 +6,6 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar /> */}
       <Switch>
         <Route exact path="/">
           <Home />
