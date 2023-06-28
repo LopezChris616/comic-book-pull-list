@@ -7,7 +7,7 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route exact path="/">
           <Home />
