@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import Navbar from "./Navbar";
 
 function NewComicBook() {
 
     return (
-        <h1>Comic Book Pulls</h1>
+        <>
+            <Navbar />
+        </>
     )
 
     // return (

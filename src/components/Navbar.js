@@ -1,9 +1,18 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
-        <h1>navbar</h1>
+        <div className="navbar">
+          <div className="nav-home">
+            <NavLink exact to="/">Pull List</NavLink>
+          </div>
+          <div class="nav-links">
+            <NavLink to="/marvel">Marvel Comics</NavLink>
+            <NavLink to="/dc">DC Comics</NavLink>
+            <NavLink to="/image">Image Comics</NavLink>
+          </div>
+        </div>
       );
     // return (
     //     <Box sx={{ flexGrow: 1 }}>
