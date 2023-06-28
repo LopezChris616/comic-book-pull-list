@@ -10,13 +10,13 @@ function NewComicBook() {
                 <h1>Add New Comic Book</h1>
                 <form className="comic-form">
                     <div className="form-item">
-                        <label for="comic-title">Comic Book Title</label>
+                        <label htmlFor="comic-title">Comic Book Title </label>
                         <input id="comic-title" />
                     </div>
                     <div className="form-item">
-                        <label for="comic-type">Type</label>
-                        <select id="comic-type">
-                            <option disabled selected>Select</option>
+                        <label htmlFor="comic-type">Type </label>
+                        <select id="comic-type" defaultValue="Select">
+                            <option disabled>Select</option>
                             <option value="Ongoing">Ongoing</option>
                             <option value="Mini-Series">Mini-Series</option>
                             <option value="Maxi-Series">Maxi-Series</option>
@@ -24,11 +24,11 @@ function NewComicBook() {
                         </select>
                     </div>
                     <div className="form-item">
-                        <label for="comic-genre">Genre</label>
+                        <label htmlFor="comic-genre">Genre </label>
                         <input id="comic-genre" />
                     </div>
                     <div className="form-item">
-                        <label for="comic-price">Price</label>
+                        <label htmlFor="comic-price">Price </label>
                         <input type="number" id="comic-price" />
                     </div>
                     <div className="form-item">

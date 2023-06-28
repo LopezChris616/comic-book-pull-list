@@ -7,7 +7,7 @@ function Navbar() {
           <div className="nav-home">
             <NavLink exact to="/">Pull List</NavLink>
           </div>
-          <div class="nav-links">
+          <div className="nav-links">
             <NavLink to="/marvel">Marvel Comics</NavLink>
             <NavLink to="/dc">DC Comics</NavLink>
             <NavLink to="/image">Image Comics</NavLink>
