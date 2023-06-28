@@ -11,6 +11,7 @@ function Navbar() {
             <NavLink to="/marvel">Marvel Comics</NavLink>
             <NavLink to="/dc">DC Comics</NavLink>
             <NavLink to="/image">Image Comics</NavLink>
+            <NavLink to="/addComic">Add Comic Book</NavLink>
           </div>
         </div>
       );

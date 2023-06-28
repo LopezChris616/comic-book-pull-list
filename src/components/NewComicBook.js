@@ -6,6 +6,36 @@ function NewComicBook() {
     return (
         <>
             <Navbar />
+            <div className="form-container">
+                <h1>Add New Comic Book</h1>
+                <form className="comic-form">
+                    <div className="form-item">
+                        <label for="comic-title">Comic Book Title</label>
+                        <input id="comic-title" />
+                    </div>
+                    <div className="form-item">
+                        <label for="comic-type">Type</label>
+                        <select id="comic-type">
+                            <option disabled selected>Select</option>
+                            <option value="Ongoing">Ongoing</option>
+                            <option value="Mini-Series">Mini-Series</option>
+                            <option value="Maxi-Series">Maxi-Series</option>
+                            <option value="One-Shot">One-Shot</option>
+                        </select>
+                    </div>
+                    <div className="form-item">
+                        <label for="comic-genre">Genre</label>
+                        <input id="comic-genre" />
+                    </div>
+                    <div className="form-item">
+                        <label for="comic-price">Price</label>
+                        <input type="number" id="comic-price" />
+                    </div>
+                    <div className="form-item">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
         </>
     )
 
