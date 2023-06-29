@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import ComicBook from "./ComicBook";
 
 function ComicBookPulls({ comics, setComics }) {
-    const headers = ["Title", "Type", "Genre", "Price"];
+    const headers = ["Title", "Type", "Released", "Genre", "Price"];
     const path = window.location.pathname;
 
     useEffect(() => {

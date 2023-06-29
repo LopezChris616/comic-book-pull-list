@@ -5,6 +5,7 @@ function NewComicBook({ comics, setComics }) {
     const [newComic, setNewComic] = useState({
         title: "",
         type: "",
+        releaseFrequency: "",
         genre: "",
         price: "",
         publisher: ""
@@ -14,6 +15,24 @@ function NewComicBook({ comics, setComics }) {
         setNewComic({
             ...newComic,
             [event.target.name]: event.target.value
+        });
+    }
+
+    function handleNewComic(event) {
+        event.preventDefault();
+        fetch(`https://comic-book-pull-list.onrender.com/${newComic.publisher}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "applicaiton/json"
+            },
+            body: JSON.stringify({
+                title: newComic.title,
+                type: newComic.type,
+                genre: newComic.genre,
+                price: newComic.price
+            })
+                .then(res => res.json())
+                .then(comic => console.log(comic))
         });
     }
 
@@ -38,6 +57,15 @@ function NewComicBook({ comics, setComics }) {
                         </select>
                     </div>
                     <div className="form-item">
+                        <label htmlFor="comic-release">Release Schedule </label>
+                        <select id="comic-release" name="releaseFrequency" value={ newComic.releaseFrequency } onChange={ handleChange }>
+                            <option disabled>Select</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Bi-Weekly">Bi-Weekly</option>
+                            <option value="Weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <div className="form-item">
                         <label htmlFor="comic-publisher">Publisher </label>
                         <select id="comic-publisher" name="publisher" value={ newComic.publisher } onChange={ handleChange }>
                             <option disabled>Select</option>
@@ -55,7 +83,7 @@ function NewComicBook({ comics, setComics }) {
                         <input type="number" id="comic-price" name="price" value={ newComic.price } onChange={ handleChange } />
                     </div>
                     <div className="form-item">
-                        <button>Submit</button>
+                        <button onSubmit={ handleNewComic }>Submit</button>
                     </div>
                 </form>
             </div>
