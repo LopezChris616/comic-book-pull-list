@@ -32,9 +32,9 @@ function NewComicBook({ comics, setComics }) {
                 genre: newComic.genre,
                 price: newComic.price
             })
-                .then(res => res.json())
-                .then(comic => console.log(comic))
-        });
+        })
+            .then(res => res.json())
+            .then(comic => console.log(comic));
     }
 
     return (
@@ -42,7 +42,7 @@ function NewComicBook({ comics, setComics }) {
             <Navbar />
             <div className="form-container">
                 <h1>Add New Comic Book</h1>
-                <form className="comic-form">
+                <form className="comic-form" onSubmit={ handleNewComic }>
                     <div className="form-item">
                         <label htmlFor="comic-title">Comic Book Title </label>
                         <input id="comic-title" name="title" value={ newComic.title } onChange={ handleChange } />
@@ -84,7 +84,7 @@ function NewComicBook({ comics, setComics }) {
                         <input type="number" id="comic-price" name="price" value={ newComic.price } onChange={ handleChange } />
                     </div>
                     <div className="form-item">
-                        <button onSubmit={ handleNewComic }>Submit</button>
+                        <button>Submit</button>
                     </div>
                 </form>
             </div>
