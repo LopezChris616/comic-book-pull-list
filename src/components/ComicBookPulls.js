@@ -10,6 +10,7 @@ function ComicBookPulls({ comics, setComics }) {
         fetch(`https://comic-book-pull-list.onrender.com${path}`)
             .then(res => res.json())
             .then(comicList => setComics(comicList))
+            .catch(err => console.error(err));
     }, [path])
 
     console.log(comics);

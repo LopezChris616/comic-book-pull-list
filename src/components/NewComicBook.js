@@ -34,7 +34,8 @@ function NewComicBook({ comics, setComics }) {
             })
         })
             .then(res => res.json())
-            .then(comic => console.log(comic));
+            .then(comic => console.log(comic))
+            .catch(err => console.error(err));
     }
 
     return (
