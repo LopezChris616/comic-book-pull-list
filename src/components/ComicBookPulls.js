@@ -35,30 +35,6 @@ function ComicBookPulls({ comics, setComics }) {
             </div>
         </>
     )
-
-    // 
-
-    // const tableData = comics.map(comic => <ComicBook comic={ comic } tableStyle={ tableStyle } key={ comic.id } />)
-
-    // return (
-    //     <>
-    //         <h1 style={{color: "white", textAlign: "center"}}>{window.location.pathname.slice(1).toUpperCase()}</h1>
-    //         <Grid container>
-    //             <TableContainer sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-    //                 <Table sx={{ maxWidth: 700 }}>
-    //                     <TableHead>
-    //                         <TableRow>
-    //                             { tableHeaders }
-    //                         </TableRow>
-    //                     </TableHead>
-    //                     <TableBody>
-    //                         { tableData }
-    //                     </TableBody>
-    //                 </Table>
-    //             </TableContainer>
-    //         </Grid>
-    //     </>
-    // )
 }
 
 export default ComicBookPulls;
