@@ -1,9 +1,13 @@
+import React, { useEffect, useState } from "react";
+
 import Home from "./Home";
 import ComicBookPulls from "./ComicBookPulls";
 import NewComicBook from "./NewComicBook";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
+  const [comics, setComics] = useState([]);
+
   return (
     <div className="App">
       <Switch>
@@ -11,16 +15,16 @@ function App() {
           <Home />
         </Route>
         <Route path="/marvel">
-          <ComicBookPulls />
+          <ComicBookPulls comics={ comics } setComics={ setComics } />
         </Route>
         <Route path="/dc">
-          <ComicBookPulls />
+          <ComicBookPulls comics={ comics } setComics={ setComics } />
         </Route>
         <Route path="/image">
-          <ComicBookPulls />
+          <ComicBookPulls comics={ comics } setComics={ setComics } />
         </Route>
         <Route path="/addComic">
-          <NewComicBook />
+          <NewComicBook comics={ comics } setComics={ setComics } />
         </Route>
       </Switch>
     </div>

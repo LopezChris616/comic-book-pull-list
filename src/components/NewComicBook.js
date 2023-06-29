@@ -1,7 +1,21 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 
-function NewComicBook() {
+function NewComicBook({ comics, setComics }) {
+    const [newComic, setNewComic] = useState({
+        title: "",
+        type: "",
+        genre: "",
+        price: "",
+        publisher: ""
+    });
+
+    function handleChange(event) {
+        setNewComic({
+            ...newComic,
+            [event.target.name]: event.target.value
+        });
+    }
 
     return (
         <>
@@ -11,11 +25,11 @@ function NewComicBook() {
                 <form className="comic-form">
                     <div className="form-item">
                         <label htmlFor="comic-title">Comic Book Title </label>
-                        <input id="comic-title" />
+                        <input id="comic-title" name="title" value={ newComic.title } onChange={ handleChange } />
                     </div>
                     <div className="form-item">
                         <label htmlFor="comic-type">Type </label>
-                        <select id="comic-type" defaultValue="Select">
+                        <select id="comic-type" name="type" value={ newComic.type } onChange={ handleChange }>
                             <option disabled>Select</option>
                             <option value="Ongoing">Ongoing</option>
                             <option value="Mini-Series">Mini-Series</option>
@@ -25,7 +39,7 @@ function NewComicBook() {
                     </div>
                     <div className="form-item">
                         <label htmlFor="comic-publisher">Publisher </label>
-                        <select id="comic-publisher" defaultValue="Select">
+                        <select id="comic-publisher" name="publisher" value={ newComic.publisher } onChange={ handleChange }>
                             <option disabled>Select</option>
                             <option value="marvel">Marvel Comics</option>
                             <option value="dc">DC Comics</option>
@@ -34,11 +48,11 @@ function NewComicBook() {
                     </div>
                     <div className="form-item">
                         <label htmlFor="comic-genre">Genre </label>
-                        <input id="comic-genre" />
+                        <input id="comic-genre" name="genre" value={ newComic.genre } onChange={ handleChange } />
                     </div>
                     <div className="form-item">
                         <label htmlFor="comic-price">Price </label>
-                        <input type="number" id="comic-price" />
+                        <input type="number" id="comic-price" name="price" value={ newComic.price } onChange={ handleChange } />
                     </div>
                     <div className="form-item">
                         <button>Submit</button>

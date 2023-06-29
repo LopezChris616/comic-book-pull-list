@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import ComicBook from "./ComicBook";
 
-function ComicBookPulls() {
-    const [comics, setComics] = useState([]);
+function ComicBookPulls({ comics, setComics }) {
     const headers = ["Title", "Type", "Genre", "Price"];
     const path = window.location.pathname;
 
