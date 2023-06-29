@@ -23,11 +23,12 @@ function NewComicBook({ comics, setComics }) {
         fetch(`https://comic-book-pull-list.onrender.com/${newComic.publisher}`, {
             method: "POST",
             headers: {
-                "Content-Type": "applicaiton/json"
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 title: newComic.title,
                 type: newComic.type,
+                releaseFrequency: newComic.releaseFrequency,
                 genre: newComic.genre,
                 price: newComic.price
             })
