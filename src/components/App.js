@@ -8,6 +8,10 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   const [comics, setComics] = useState([]);
 
+  function addComic(newComic) {
+    setComics([...comics, newComic]);
+  }
+
   return (
     <div className="App">
       <Switch>
@@ -24,7 +28,7 @@ function App() {
           <ComicBookPulls comics={ comics } setComics={ setComics } />
         </Route>
         <Route path="/addComic">
-          <NewComicBook comics={ comics } setComics={ setComics } />
+          <NewComicBook addComic={ addComic } />
         </Route>
       </Switch>
     </div>

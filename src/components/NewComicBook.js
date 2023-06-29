@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 
-function NewComicBook({ comics, setComics }) {
+function NewComicBook({ addComic }) {
     const [newComic, setNewComic] = useState({
         title: "",
         type: "",
@@ -34,7 +34,7 @@ function NewComicBook({ comics, setComics }) {
             })
         })
             .then(res => res.json())
-            .then(comic => console.log(comic))
+            .then(newComic => addComic(newComic))
             .catch(err => console.error(err));
     }
 
