@@ -32,15 +32,16 @@ code {
 .navbar a {
   color: white;
   text-decoration: none;
-  font-size: 22px;
 }
 
 .nav-home a {
   margin-left: 20px;
+  font-size: 22px;
 }
 
 .nav-links a {
   margin-right: 20px;
+  font-size: 18px;
 }
 
 .nav-links a:hover {
