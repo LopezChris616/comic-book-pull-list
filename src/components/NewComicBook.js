@@ -63,7 +63,7 @@ function NewComicBook({ addComic }) {
                     <div className="form-item">
                         <label htmlFor="comic-type">Type </label>
                         <select id="comic-type" name="type" value={ newComic.type } onChange={ handleChange }>
-                            <option disabled>Select</option>
+                            <option>Select</option>
                             <option value="Ongoing">Ongoing</option>
                             <option value="Mini-Series">Mini-Series</option>
                             <option value="Maxi-Series">Maxi-Series</option>
@@ -73,7 +73,7 @@ function NewComicBook({ addComic }) {
                     <div className="form-item">
                         <label htmlFor="comic-release">Release Schedule </label>
                         <select id="comic-release" name="releaseFrequency" value={ newComic.releaseFrequency } onChange={ handleChange }>
-                            <option disabled>Select</option>
+                            <option>Select</option>
                             <option value="Monthly">Monthly</option>
                             <option value="Bi-Weekly">Bi-Weekly</option>
                             <option value="Weekly">Weekly</option>
@@ -82,7 +82,7 @@ function NewComicBook({ addComic }) {
                     <div className="form-item">
                         <label htmlFor="comic-publisher">Publisher </label>
                         <select id="comic-publisher" name="publisher" value={ newComic.publisher } onChange={ handleChange }>
-                            <option disabled>Select</option>
+                            <option>Select</option>
                             <option value="marvel">Marvel Comics</option>
                             <option value="dc">DC Comics</option>
                             <option value="image">Image Comics</option>
