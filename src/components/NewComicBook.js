@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 import Navbar from "./Navbar";
 
 function NewComicBook({ addComic }) {
+    const [redirect, setRedirect] = useState(null);
     const [newComic, setNewComic] = useState({
         title: "",
         type: "",
@@ -20,6 +22,7 @@ function NewComicBook({ addComic }) {
 
     function handleNewComic(event) {
         event.preventDefault();
+        const { publisher } = newComic;
         fetch(`https://comic-book-pull-list.onrender.com/${newComic.publisher}`, {
             method: "POST",
             headers: {
@@ -34,9 +37,18 @@ function NewComicBook({ addComic }) {
             })
         })
             .then(res => res.json())
-            .then(newComic => addComic(newComic))
+            .then(newComic => {
+                addComic(newComic);
+                setRedirect(`/${publisher}`);
+            })
             .catch(err => console.error(err));
+
     }
+
+    if(redirect) {
+        return <Redirect to={ redirect } />;
+    }
+
 
     return (
         <>
