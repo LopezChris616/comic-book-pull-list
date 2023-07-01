@@ -3,22 +3,12 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
 
 html body {
   background-color: #1E1E1E;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .navbar {
@@ -70,6 +60,7 @@ code {
   text-decoration: none;
   font-size: 24px;
   color: white;
+  transition: all 0.5s ease;
 }
 
 .home-page a:hover {
@@ -84,7 +75,7 @@ code {
 
 table {
   margin: 0 auto;
-  border-spacing: 15px; /* Adjust the desired spacing value */
+  border-spacing: 15px;
 }
 
 .form-container {
