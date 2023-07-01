@@ -5,6 +5,7 @@ import ComicBook from "./ComicBook";
 function ComicBookPulls({ comics, setComics }) {
     const headers = ["Title", "Type", "Released", "Genre", "Price"];
     const path = window.location.pathname;
+    const loading = <h1>Getting Comic Data...</h1>;
 
     useEffect(() => {
         fetch(`https://comic-book-pull-list.onrender.com${path}`)
@@ -23,7 +24,7 @@ function ComicBookPulls({ comics, setComics }) {
             <Navbar />
             <div className="comic-data">
                 <h1>{ path.slice(1).toUpperCase() } COMICS</h1>
-                <table>
+                { comics.length > 0 ?  <table>
                     <thead>
                         <tr>
                             { tableHeaders }
@@ -32,7 +33,7 @@ function ComicBookPulls({ comics, setComics }) {
                     <tbody>
                         { tableData }
                     </tbody>
-                </table>
+                </table> : loading }
             </div>
         </>
     )
