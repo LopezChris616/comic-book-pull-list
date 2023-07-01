@@ -5,13 +5,13 @@ function Navbar() {
     return (
         <div className="navbar">
           <div className="nav-home">
-            <NavLink exact to="/">Pull List</NavLink>
+            <NavLink exact to="/" className="comic-links">Pull List</NavLink>
           </div>
           <div className="nav-links">
-            <NavLink to="/marvel">Marvel Comics</NavLink>
-            <NavLink to="/dc">DC Comics</NavLink>
-            <NavLink to="/image">Image Comics</NavLink>
-            <NavLink to="/addComic">Add Comic Book</NavLink>
+            <NavLink to="/marvel" className="comic-links">Marvel Comics</NavLink>
+            <NavLink to="/dc" className="comic-links">DC Comics</NavLink>
+            <NavLink to="/image" className="comic-links">Image Comics</NavLink>
+            <NavLink to="/addComic" className="comic-links">Add Comic Book</NavLink>
           </div>
         </div>
       );
