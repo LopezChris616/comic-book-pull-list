@@ -14,8 +14,6 @@ function ComicBookPulls({ comics, setComics }) {
             .catch(err => console.error(err));
     }, [path])
 
-    console.log(comics);
-
     const tableHeaders = headers.map(header => <th key={ header }>{ header }</th>);
     const tableData = comics.map(comic => <ComicBook comic={ comic } key={ comic.id } />)
 
