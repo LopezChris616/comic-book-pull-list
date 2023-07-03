@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  // Used to display an underline under the currently active page
   const linkStyle = {
     borderBottom: "1px solid white"
   };

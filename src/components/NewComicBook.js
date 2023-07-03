@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import Navbar from "./Navbar";
 
 function NewComicBook({ addComic }) {
-    const [redirectPath, setRedirectPath] = useState(null);
+    const [redirectPath, setRedirectPath] = useState(null); // Used to set state of the redirect path
     const [newComic, setNewComic] = useState({
         title: "",
         type: "",
@@ -44,7 +44,7 @@ function NewComicBook({ addComic }) {
             .catch(err => console.error(err));
 
     }
-
+    // Used to determine what path to redirect to after form is submitted
     if(redirectPath) {
         return <Redirect to={ redirectPath } />;
     }
